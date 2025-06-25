@@ -20,9 +20,9 @@ export default function LinktreePage() {
 
   // Clinic data
   const clinic = {
-    name: "Nuvance Estética",
+    name: "My Shape",
     bio: "Realce sua beleza natural com cuidado e tecnologia avançada ✨",
-    profileImage: "/logo.jpg",
+    profileImage: "/logo2.jpg",
     location: "Rua das Flores, 123 - Centro, São Paulo - SP", // Added location
     links: [
       {
@@ -72,11 +72,11 @@ export default function LinktreePage() {
 
   // Color palette (customizable)
   const colors = {
-    primary: "bg-purple-600",
-    primaryHover: "hover:bg-purple-700",
-    text: "text-gray-800",
+    primary: "bg-rose-400",
+    primaryHover: "hover:bg-pink-500",
+    text: "text-black",
     background: "bg-white",
-    accent: "text-purple-600",
+    accent: "text-black",
   };
 
   const handleEmailSubmit = (e: React.FormEvent) => {
@@ -88,7 +88,7 @@ export default function LinktreePage() {
   return (
     <>
       <Head>
-        <title>BellaVitta Estética | Links</title>
+        <title>My Shape | Links</title>
         <meta
           name="description"
           content="Acesse todos os links da BellaVitta Estética Avançada: agendamentos, redes sociais, e-books e mais!"
@@ -109,7 +109,7 @@ export default function LinktreePage() {
             />
           </div>
           <h1
-            className={`text-2xl sm:text-3xl font-bold ${colors.text} bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent`}
+            className={`text-2xl sm:text-3xl font-bold ${colors.text} bg-gradient-to-r from-rose-400 to-red-300 bg-clip-text text-transparent`}
           >
             {clinic.name}
           </h1>
@@ -130,7 +130,7 @@ export default function LinktreePage() {
                 {link.icon}
                 <span>{link.title}</span>
               </div>
-              <Heart className="w-5 h-5 text-pink-300" />
+              <Heart className="w-5 h-5 text-red-200" />
             </a>
           ))}
         </div>

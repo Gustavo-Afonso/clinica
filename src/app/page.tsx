@@ -135,7 +135,7 @@ export default function BellaVittaClinic() {
                 </div>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-rose-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                BellaVitta
+              My Shape
               </span>
             </div>
 
@@ -471,7 +471,7 @@ export default function BellaVittaClinic() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Heart className="w-8 h-8 text-rose-400" />
-                <span className="text-2xl font-bold">BellaVitta</span>
+                <span className="text-2xl font-bold">My Shape</span>
               </div>
               <p className="text-gray-400 mb-4">
                 Estética Avançada para realçar sua beleza natural com tecnologia e cuidado humano.
