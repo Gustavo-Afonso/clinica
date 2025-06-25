@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
   ChevronLeft,
   ChevronRight,
@@ -17,6 +18,8 @@ import {
   Snowflake,
   SyringeIcon as Needle,
   Wind,
+  X,
+  Menu,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -26,6 +29,26 @@ import { Badge } from "@/components/ui/badge"
 
 export default function BellaVittaClinic() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("inicio")
+
+  // Handle scroll effect for header
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Auto-advance testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
 
   const services = [
     {
@@ -86,40 +109,94 @@ export default function BellaVittaClinic() {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+      setMobileMenuOpen(false)
+    }
+  }
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 to-pink-50">
+
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white/90 backdrop-blur-sm"
+      }`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Heart className="w-8 h-8 text-rose-400" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">
+              <div className="relative">
+                <Heart className="w-8 h-8 text-rose-400 animate-pulse" />
+                <div className="absolute inset-0 w-8 h-8 text-rose-400 animate-ping opacity-20">
+                  <Heart className="w-8 h-8" />
+                </div>
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-rose-400 via-pink-500 to-purple-500 bg-clip-text text-transparent">
                 BellaVitta
               </span>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#inicio" className="text-gray-700 hover:text-rose-400 transition-colors">
-                Início
-              </a>
-              <a href="#sobre" className="text-gray-700 hover:text-rose-400 transition-colors">
-                Sobre
-              </a>
-              <a href="#servicos" className="text-gray-700 hover:text-rose-400 transition-colors">
-                Serviços
-              </a>
-              <a href="#depoimentos" className="text-gray-700 hover:text-rose-400 transition-colors">
-                Depoimentos
-              </a>
-              <a href="#contato" className="text-gray-700 hover:text-rose-400 transition-colors">
-                Contato
-              </a>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex space-x-8">
+              {["inicio", "sobre", "servicos", "depoimentos", "contato"].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className={`text-gray-700 hover:text-rose-400 transition-all duration-300 font-medium capitalize relative ${
+                    activeSection === section ? "text-rose-400" : ""
+                  }`}
+                >
+                  {section}
+                  {activeSection === section && (
+                    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full" />
+                  )}
+                </button>
+              ))}
             </nav>
-            <Button className="bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white">
+
+            {/* Desktop CTA Button */}
+            <Button className="hidden lg:flex bg-gradient-to-r from-rose-400 via-pink-500 to-purple-500 hover:from-rose-500 hover:via-pink-600 hover:to-purple-600 text-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Phone className="w-4 h-4 mr-2" />
               Agendar Avaliação
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t">
+            <div className="container mx-auto px-4 py-4">
+              <nav className="flex flex-col space-y-4">
+                {["inicio", "sobre", "servicos", "depoimentos", "contato"].map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className="text-left text-gray-700 hover:text-rose-400 transition-colors font-medium capitalize py-2"
+                  >
+                    {section}
+                  </button>
+                ))}
+                <Button className="mt-4 bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Agendar Avaliação
+                </Button>
+              </nav>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
