@@ -16,7 +16,7 @@ export default function ServicesSection() {
       title: "Cirurgia Geral",
       description: "Tratamentos cirúrgicos completos com segurança e precisão para diversas condições.",
       features: ["Cirurgia Laparoscópica", "Hérnias", "Vesícula", "Apendicite", "Cirurgia Oncológica"],
-      color: "text-blue-700",
+      color: "text-slate-800",
     },
     {
       icon: Heart,
@@ -36,7 +36,7 @@ export default function ServicesSection() {
         "Nutrição Esportiva",
         "Acompanhamento",
       ],
-      color: "text-blue-700",
+      color: "text-slate-800",
     },
   ]
 
@@ -44,7 +44,7 @@ export default function ServicesSection() {
     <section id="servicos" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Nossos <span className="text-amber-600">Serviços</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -62,7 +62,7 @@ export default function ServicesSection() {
                 >
                   <service.icon className={`h-8 w-8 ${service.color}`} />
                 </div>
-                <CardTitle className="text-xl font-bold text-blue-700">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-bold text-slate-800">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-4">
                 <CardDescription className="text-gray-600 leading-relaxed">{service.description}</CardDescription>
@@ -75,7 +75,7 @@ export default function ServicesSection() {
                 </div>
                 <Button
                   variant="outline"
-                  className="w-full border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
+                  className="w-full border-blue-700 text-slate-800 hover:bg-blue-700 hover:text-white"
                 >
                   Saiba Mais
                 </Button>

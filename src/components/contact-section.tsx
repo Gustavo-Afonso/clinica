@@ -36,7 +36,7 @@ export default function ContactSection() {
     <section id="contato" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Entre em <span className="text-amber-600">Contato</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -53,9 +53,9 @@ export default function ContactSection() {
                   <CardHeader className="pb-3">
                     <div className="flex items-center space-x-3">
                       <div className="bg-blue-100 p-2 rounded-lg">
-                        <item.icon className="h-5 w-5 text-blue-700" />
+                        <item.icon className="h-5 w-5 text-slate-800" />
                       </div>
-                      <CardTitle className="text-lg text-blue-700">{item.title}</CardTitle>
+                      <CardTitle className="text-lg text-slate-800">{item.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -68,7 +68,7 @@ export default function ContactSection() {
 
             <Card className="border-0 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-xl text-blue-700">Localização</CardTitle>
+                <CardTitle className="text-xl text-slate-800">Localização</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
@@ -80,7 +80,7 @@ export default function ContactSection() {
 
           <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-blue-700">Envie uma Mensagem</CardTitle>
+              <CardTitle className="text-2xl text-slate-800">Envie uma Mensagem</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">

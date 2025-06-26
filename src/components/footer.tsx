@@ -6,7 +6,7 @@ export default function Footer() {
   const quickLinks = ["Sobre Nós", "Nossos Médicos", "Convênios", "Blog", "Política de Privacidade", "Termos de Uso"]
 
   return (
-    <footer className="bg-blue-700 text-white">
+    <footer className="bg-slate-800 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}

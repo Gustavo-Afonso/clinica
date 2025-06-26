@@ -25,7 +25,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-blue-700">
+              <h2 className="text-4xl font-bold text-slate-800">
                 Sobre a <span className="text-amber-600">Clínica Excellence</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -47,7 +47,7 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white">
+            <Button size="lg" className="bg-slate-800 hover:bg-blue-800 text-white">
               Conheça Nossa História
             </Button>
           </div>
@@ -72,8 +72,8 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center p-6 bg-gray-50 rounded-xl">
-                  <achievement.icon className="h-8 w-8 text-blue-700 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-blue-700 mb-1">{achievement.number}</div>
+                  <achievement.icon className="h-8 w-8 text-slate-800 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-slate-800 mb-1">{achievement.number}</div>
                   <div className="text-sm text-gray-600">{achievement.text}</div>
                 </div>
               ))}

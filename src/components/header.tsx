@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-blue-700 text-white py-3">
+      <div className="bg-slate-800 text-white py-3">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm gap-4 md:gap-0">
             <div className="flex items-center gap-6">
@@ -58,7 +58,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-blue-700 tracking-tight">
+            <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
               Logo
             </h1>
           </div>
