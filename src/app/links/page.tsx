@@ -6,7 +6,6 @@ import {
   Facebook,
   Mail,
   Phone,
-  Sparkles,
   Heart,
   Send,
   Link as LinkIcon,
@@ -20,16 +19,11 @@ export default function LinktreePage() {
 
   // Clinic data
   const clinic = {
-    name: "My Shape",
-    bio: "Realce sua beleza natural com cuidado e tecnologia avançada ✨",
-    profileImage: "/logo2.jpg",
+    name: "Clínica Vidha",
+    bio: "Cirurgia Plástica | Cirurgia Geral | Proctologia | Nutrição",
+    profileImage: "/logo.jpg",
     location: "Rua das Flores, 123 - Centro, São Paulo - SP", // Added location
     links: [
-      {
-        title: "Agende sua Avaliação Gratuita",
-        url: "https://wa.me/5511999999999",
-        icon: <Phone className="w-5 h-5" />,
-      },
       {
         title: "Nosso Site",
         url: "https://bellavittaestetica.com.br",
@@ -39,11 +33,6 @@ export default function LinktreePage() {
         title: "Instagram",
         url: "https://instagram.com/bellavittaestetica",
         icon: <Instagram className="w-5 h-5" />,
-      },
-      {
-        title: "E-book: Segredos da Pele Perfeita",
-        url: "https://bellavittaestetica.com.br/ebook",
-        icon: <Sparkles className="w-5 h-5" />,
       },
       {
         title: "Fale Conosco",
@@ -72,8 +61,8 @@ export default function LinktreePage() {
 
   // Color palette (customizable)
   const colors = {
-    primary: "bg-rose-400",
-    primaryHover: "hover:bg-pink-500",
+    primary: "bg-blue-600",
+    primaryHover: "hover:bg-blue-400",
     text: "text-black",
     background: "bg-white",
     accent: "text-black",
@@ -109,7 +98,7 @@ export default function LinktreePage() {
             />
           </div>
           <h1
-            className={`text-2xl sm:text-3xl font-bold ${colors.text} bg-gradient-to-r from-rose-400 to-red-300 bg-clip-text text-transparent`}
+            className={`text-2xl sm:text-3xl font-bold ${colors.text} bg-gradient-to-r from-black to-black bg-clip-text text-transparent`}
           >
             {clinic.name}
           </h1>
