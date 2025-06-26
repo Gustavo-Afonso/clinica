@@ -61,7 +61,7 @@ export default function LinktreePage() {
 
   // Color palette (customizable)
   const colors = {
-    primary: "bg-blue-600",
+    primary: "bg-slate-800",
     primaryHover: "hover:bg-blue-400",
     text: "text-black",
     background: "bg-white",
