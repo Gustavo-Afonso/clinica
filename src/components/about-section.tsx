@@ -26,7 +26,7 @@ export default function AboutSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-slate-800">
-                Sobre a <span className="text-amber-600">Clínica Excellence</span>
+                Sobre a <span className="text-yellow-600">Clínica Excellence</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Há mais de 15 anos, a Clínica Excellence tem sido referência em cuidados médicos especializados,
@@ -41,7 +41,7 @@ export default function AboutSection() {
             <div className="space-y-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-amber-600 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-yellow-600flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
                 </div>
               ))}
@@ -61,7 +61,7 @@ export default function AboutSection() {
   height={300}
   className="rounded-xl object-cover  h-auto"
 />
-              <div className="absolute -bottom-6 -right-6 bg-amber-600 text-white p-6 rounded-xl shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-yellow-600 text-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
                   <div className="text-3xl font-bold">15+</div>
                   <div className="text-sm">Anos de Excelência</div>

@@ -45,7 +45,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">
-            Nossos <span className="text-amber-600">Serviços</span>
+            Nossos <span className="text-yellow-600">Serviços</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Oferecemos uma gama completa de serviços médicos especializados, sempre com foco na excelência e no

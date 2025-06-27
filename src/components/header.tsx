@@ -77,7 +77,7 @@ export default function Header() {
               </a>
             ))}
             <Button 
-              className="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-2 rounded-full transition-all duration-200"
+              className="bg-yellow-600 hover:bg-amber-700 text-white font-semibold px-6 py-2 rounded-full transition-all duration-200"
               aria-label="Agendar consulta"
             >
               Agendar Consulta

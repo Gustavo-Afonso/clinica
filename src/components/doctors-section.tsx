@@ -43,7 +43,7 @@ export default function DoctorsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">
-            Nossa <span className="text-amber-600">Equipe Médica</span>
+            Nossa <span className="text-yellow-600">Equipe Médica</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Profissionais altamente qualificados e experientes, dedicados a oferecer o melhor cuidado médico com
@@ -66,14 +66,14 @@ export default function DoctorsSection() {
             className="rounded-lg object-cover"
           />
                 <div className="absolute top-4 right-4">
-                  <Badge className="bg-amber-600 text-white">{doctor.specialty}</Badge>
+                  <Badge className="bg-yellow-600 text-white">{doctor.specialty}</Badge>
                 </div>
               </div>
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-slate-800">{doctor.name}</h3>
                   <p className="text-sm text-gray-500">{doctor.credentials}</p>
-                  <p className="text-sm text-amber-600 font-medium">{doctor.experience}</p>
+                  <p className="text-sm text-yellow-600 font-medium">{doctor.experience}</p>
                 </div>
 
                 <div className="space-y-2">

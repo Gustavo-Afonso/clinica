@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
-              Clínica <span className="text-amber-500">Excellence</span>
+              Clínica <span className="text-yellow-600">Excellence</span>
             </h3>
             <p className="text-blue-100 leading-relaxed">
               Há mais de 15 anos cuidando da sua saúde com excelência, tecnologia de ponta e atendimento humanizado.
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Serviços */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-amber-500">Nossos Serviços</h4>
+            <h4 className="text-lg font-semibold text-yellow-600">Nossos Serviços</h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Links Rápidos */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-amber-500">Links Rápidos</h4>
+            <h4 className="text-lg font-semibold text-yellow-600">Links Rápidos</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -63,15 +63,15 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-amber-500">Contato</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-amber-500" />
+                <Phone className="h-4 w-4 text-yellow-600" />
                 <span className="text-blue-100">(11) 99999-9999</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-amber-500" />
+                <Mail className="h-4 w-4 text-yellow-600" />
                 <span className="text-blue-100">contato@clinicaexcellence.com.br</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-amber-500 mt-1" />
+                <MapPin className="h-4 w-4 text-yellow-600 mt-1" />
                 <span className="text-blue-100">
                   Av. Paulista, 1000 - Bela Vista
                   <br />

@@ -37,7 +37,7 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">
-            Entre em <span className="text-amber-600">Contato</span>
+            Entre em <span className="text-yellow-600">Contato</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Estamos prontos para atendê-lo. Entre em contato conosco para agendar sua consulta ou esclarecer suas
@@ -115,7 +115,7 @@ export default function ContactSection() {
                 <Textarea placeholder="Descreva como podemos ajudá-lo..." className="min-h-[120px]" />
               </div>
 
-              <Button size="lg" className="w-full bg-amber-600 hover:bg-amber-700 text-white">
+              <Button size="lg" className="w-full bg-yellow-600 hover:bg-amber-700 text-white">
                 Enviar Mensagem
               </Button>
             </CardContent>
