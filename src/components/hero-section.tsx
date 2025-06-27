@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section id="inicio" className="relative bg-gradient-to-br from-slate-800 to-blue-800 text-white py-20 lg:py-32">
+    <section id="inicio" className="relative bg-gradient-to-br from-slate-800 to-blue-950 text-white py-20 lg:py-32">
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -27,7 +27,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-blue-500 hover:bg-white hover:text-blue-700"
+                className="border-white text-blue-950 hover:bg-white hover:text-blue-700"
               >
                 Nossos Serviços
               </Button>
